@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type="text/javascript" src="/sjcl.js"></script>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        
+        <div id="enc"></div>
+        
+        <input type="password" id="pwd" onkeyup="dec()" onchange="dec()"/>
+        <div id="dec"></div>
+        <script type="text/javascript">
+        document.getElementById("enc").innerHTML=
+            sjcl.encrypt("pwd","bada");
+        function dec(){
+        document.getElementById("dec").innerHTML="Not Decrypted";
+        document.getElementById("dec").innerHTML=
+            sjcl.decrypt(document.getElementById("pwd").value,
+               document.getElementById("enc").innerHTML);
+               };
+        
+        </script>
+    </body>
+</html>

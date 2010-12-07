@@ -4,21 +4,28 @@
     "http://java.sun.com/dtd/web-app_2_3.dtd">
 
 <web-app>
-  
-  <!-- Servlets -->
-  <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>com.github.jskeys.server.GreetingServiceImpl</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/jskeys_gae/greet</url-pattern>
-  </servlet-mapping>
-  
-  <!-- Default page to serve -->
-  <welcome-file-list>
-    <welcome-file>Jskeys_gae.html</welcome-file>
-  </welcome-file-list>
+    <display-name>vt</display-name>
+    <context-param>
+        <description>
+        Vaadin production mode</description>
+        <param-name>productionMode</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Main</servlet-name>
+        <servlet-class>com.vaadin.terminal.gwt.server.GAEApplicationServlet</servlet-class>
+        <init-param>
+            <description>
+            Vaadin application class to start</description>
+            <param-name>application</param-name>
+            <param-value>com.github.jskeys.Main</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Main</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
+
