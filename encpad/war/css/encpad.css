@@ -1,0 +1,38 @@
+html{
+height: 100%;
+background:#8bc750;
+margin:0px;
+padding:0px;
+border:0px;
+overflow:hidden;
+}
+
+body{
+background:	#7db348;
+margin:0px auto;
+padding:1em;
+border:0px;
+width: 720px;
+height: 100%;
+font: 15px 'Trebuchet MS'', sans-serif;
+-webkit-box-shadow: #666 2px 2px 12px;
+-moz-box-shadow: #666 2px 2px 12px;
+box-shadow: #666 2px 2px 12px;
+}
+            
+h1{
+	color: white;
+    font: 48px 'Neucha', "Trebuchet MS", sans-serif;
+    margin:0;
+    padding-bottom: 15px;
+}
+
+.haction{
+display: block;
+padding: .15em .4em 0 .4em;
+float:right;
+-webkit-box-shadow: #666 0px 2px 6px;
+-moz-box-shadow: #000 0px 2px 6px;
+-moz-border-radius: 100%;
+box-shadow: #666 0px 2px 6px;
+}
