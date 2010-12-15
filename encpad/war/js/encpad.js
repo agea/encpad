@@ -34,7 +34,7 @@ function pwstrength(pw){
         p.css('background', '-webkit-gradient(linear, 0 0, 0 bottom, from(#00ff00), to(#00bb00))');
         p.css('background', '-moz-linear-gradient(#00ff00, #00bb00)');
         p.css('background', 'linear-gradient(#00ff00, #00bb00)');
-    } else{
+    } else {
         p.css('background', '-webkit-gradient(linear, 0 0, 0 bottom, from(#ff0000), to(#bb0000))');
         p.css('background', '-moz-linear-gradient(#ff0000, #bb0000)');
         p.css('background', 'linear-gradient(#ff0000, #bb0000)');
@@ -50,6 +50,13 @@ $(function(){
     
     $("#password").change(function(){
         $(this).keyup();
+    });
+    
+    $(".action").hover(function(){
+    	$(this).find(".adesc").show(100);
+    },function(){
+    	$(this).find(".adesc").hide();
+    	
     });
     
 });

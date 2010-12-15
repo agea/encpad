@@ -8,6 +8,8 @@
         <link type="text/css" href="/css/encpad.css" rel="stylesheet" /> 
 <!--        <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>-->
 <!--        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>-->
+<!--        <link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>-->
+
         
         <script type="text/javascript" src="/js/jquery-1.4.3.min.js"></script>
         <script type="text/javascript" src="/js/sjcl.js"></script>
@@ -22,22 +24,22 @@
     	   Encrypted notepad 
     	</h1>
     	<div class="actions">
-           <a class="action"><img src="/img/information.png"/></a>
-           <a class="action"><img src="/img/question.png"/></a>    	
+           <a href="javascript:void(0)" class="action"><img src="/img/information.png"/><div class="adesc">about</div></a>
+           <a href="javascript:void(0)" class="action"><img src="/img/balloon.png"/><div class="adesc">contact<br/>me</div></a>        
+           <a href="javascript:void(0)" class="action"><img src="/img/exclamation.png"/><div class="adesc">disclaimer</div></a>        
+           <a href="javascript:void(0)" class="action"><img src="/img/mail.png"/><div class="adesc">send your<br/>notes</div></a>
+           <a href="javascript:void(0)" class="action"><img src="/img/arrow-270.png"/><div class="adesc">save your<br/>notes</div></a>        
     	</div>
 	
-        <textarea id="notepad" name="notepad">
-        </textarea>
+        <textarea id="notepad" name="notepad"></textarea>
 	
     	<div id="pwfield">
-           <label for="password">Password: </label>
-           <input id="password" name="password" type="password" />
-	
+           <input id="password" name="password" type="password" />	
 	       <div id="progressbar">
     	       <div id="pwstrength">&nbsp;</div>
 	       </div>
         </div>
-
+        
 	</body>
 </html>
 

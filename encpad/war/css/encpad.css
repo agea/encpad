@@ -14,54 +14,103 @@ body {
 	border: 0px;
 	width: 720px;
 	height: 100%;
-	position: relative; font : 15px 'Trebuchet MS' ', sans-serif;
+	position: relative;
+	font: 15px 'Trebuchet MS' ', sans-serif;
 	-webkit-box-shadow: #000 2px 2px 12px;
 	-moz-box-shadow: #000 2px 2px 12px;
 	box-shadow: #000 2px 2px 12px;
 	z-index: 100;
-	font: 15px 'Trebuchet MS' ', sans-serif;
+	font: 15px 'Cantarell', sans-serif;
 }
 
 h1 {
 	color: white;
 	font: 48px 'Neucha', "Trebuchet MS", sans-serif;
 	margin: 0;
-	padding-bottom: 15px;
+	padding-bottom: 20px;
+}
+
+a img {
+	border: 0;
 }
 
 .actions {
 	position: absolute;
-	top: 24px;
-	right: 10px;
+	top: 16px;
+	right: 16px;
 }
 
 .actions a {
-	float: right; 
-	display : block;
-	padding: 10px 10px 8px 10px;
-	background: #7db348;
+	text-decoration: none;
+	float: right;
+	display: block;
+	text-align: center;
+	padding: 8px 8px 4px 8px;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff),
+		to(#bbbbbb) );
+	background: -moz-linear-gradient(#ffffff, #bbbbbb);
+	background: linear-gradient(#ffffff, #bbbbbb);
 	margin-bottom: 8px;
 	margin-left: 8px;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
 	display: block;
-    -webkit-box-shadow: #000 2px 2px 12px;
-    -moz-box-shadow: #000 2px 2px 12px;
-    box-shadow: #000 2px 2px 12px;
-	
-}
-
-.actions a:hover {
 	-webkit-box-shadow: #000 2px 2px 12px;
 	-moz-box-shadow: #000 2px 2px 12px;
 	box-shadow: #000 2px 2px 12px;
+}
+
+.actions a:hover {
+	-webkit-box-shadow: #fff 2px 2px 12px;
+	-moz-box-shadow: #fff 2px 2px 12px;
+	box-shadow: #fff 2px 2px 12px;
 	background: white;
 }
 
+.adesc {
+	display: none;
+	text-decoration: none;
+	color: #666;
+	font-size: 10px;
+}
+
+#notepad {
+	font: 18px 'Inconsolata', monospace;
+	padding: 12px;
+	width: 696px;
+	margin: auto ! important;
+	border: 1px solid #666;
+}
+
+#pwfield {
+	font-size: 16px;
+	width: 712px;
+	margin-top: 16px;
+	background: white;
+	padding: 4px;
+	border: 1px solid #666;
+}
+
+#password {
+	font-size: 16px;
+	width: 690px;
+	display: block;
+	margin-bottom: 2px;
+	padding-left: 24px;
+	border: 0;
+	background: url(/img/key.png) white 0px 50% no-repeat;
+}
+
 #progressbar {
-	width: 100%;
-	background: #666;
+	clear: both;
+	width: 704px;
+	margin-left: 4px;
+	maergin-right: 4px;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#000000),
+		to(#666666) );
+	background: -moz-linear-gradient(#000000, #666666);
+	background: linear-gradient(#000000, #666666);
 	border: 1px solid #666;
 	-moz-border-radius: 100%;
 	-webkit-border-radius: 100%;
@@ -77,15 +126,4 @@ h1 {
 		to(#666666) );
 	background: -moz-linear-gradient(#000000, #666666);
 	background: linear-gradient(#000000, #666666);
-}
-
-#notepad {
-	font: 18px 'Inconsolata', monospace;
-	padding: 12px;
-	width: 692px;
-	margin: auto ! important;
-}
-
-#pwfield{
-width: 50%;
 }
