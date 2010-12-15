@@ -43,7 +43,14 @@ return v;
 }
 
 $(function(){
-    $("#password").keyup(function(){
+	
+    $(window).resize(function(){
+    	$("#notepad").height(($("html").innerHeight()-180)+'px');
+    });
+
+    $(window).resize();
+	
+	$("#password").keyup(function(){
         pwstrength(this.value);  
     });
     
@@ -53,10 +60,9 @@ $(function(){
     });
     
     $(".action").hover(function(){
-    	$(this).find(".adesc").show(100);
+    	$(this).find(".adesc").show(200);
     },function(){
-    	$(this).find(".adesc").hide();
+    	$(this).find(".adesc").hide(100);
     	
     });
-    
 });
