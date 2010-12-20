@@ -83,18 +83,20 @@ a img {
 	border: 1px solid #666;
 }
 
-#pwfield {
+.pwfield {
 	font-size: 16px;
-	width: 712px;
-	margin-top: 16px;
+	width: 312px;
 	background: white;
 	padding: 4px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
 	border: 1px solid #666;
 }
 
-#password {
+.password {
 	font-size: 16px;
-	width: 690px;
+	width: 290px;
 	display: block;
 	margin-bottom: 2px;
 	padding-left: 24px;
@@ -102,9 +104,9 @@ a img {
 	background: url(/img/key.png) white 0px 50% no-repeat;
 }
 
-#progressbar {
+.progressbar {
 	clear: both;
-	width: 704px;
+	width: 304px;
 	margin-left: 4px;
 	maergin-right: 4px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#000000),
@@ -117,7 +119,7 @@ a img {
 	border-radius: 100%;
 }
 
-#pwstrength {
+.pwstrength {
 	font-size: 4px;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -126,4 +128,43 @@ a img {
 		to(#666666) );
 	background: -moz-linear-gradient(#000000, #666666);
 	background: linear-gradient(#000000, #666666);
+}
+
+#savepanel {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -161px;
+	width: 322px;
+	padding: 10px;
+	background: #7db348;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	display: block;
+	-webkit-box-shadow: #000 2px 2px 40px;
+	-moz-box-shadow: #000 2px 2px 40px;
+	box-shadow: #000 2px 2px 40px;
+}
+
+.buttons {
+	width: 100%;
+	margin-top: 16px;
+}
+
+.buttons a {
+	display: block;
+	float: right;
+	margin: 8px;
+	padding: 8px;
+	border: 1px solid #666;
+	padding-left: 48px;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff),
+		to(#bbbbbb) );
+	background: -moz-linear-gradient(#ffffff, #bbbbbb);
+	background: linear-gradient(#ffffff, #bbbbbb);
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	display: block;
 }

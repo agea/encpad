@@ -7,10 +7,11 @@
 
         <link type="text/css" href="/css/encpad.css" rel="stylesheet" /> 
         
-        <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+<!--        <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>-->
+<!--        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>-->
+<!--        <link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>-->
         
+       
         <script type="text/javascript" src="/js/jquery-1.4.3.min.js"></script>
         <script type="text/javascript" src="/js/sjcl.js"></script>
         <script type="text/javascript" src="/js/encpad.js"></script>
@@ -30,11 +31,19 @@
 	
         <textarea id="notepad" name="notepad"></textarea>
 	
-    	<div id="pwfield">
-           <input id="password" name="password" type="password" />	
-	       <div id="progressbar">
-    	       <div id="pwstrength">&nbsp;</div>
-	       </div>
+        
+        <div id="savepanel">
+            <h3>To save your notes enter a password:</h3>
+            <div class="pwfield">
+                <input class="password" name="password_save" type="password" />  
+                <div class="progressbar">
+                    <div class="pwstrength">&nbsp;</div>
+                </div>
+            </div>
+            <div class="buttons">
+                <a class="ok" href="javascript:void(0)">OK</a>
+                <a class="cancel" href="javascript:void(0)">Cancel</a>
+            </div>
         </div>
         
 	</body>

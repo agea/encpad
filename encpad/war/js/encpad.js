@@ -1,4 +1,5 @@
-function pwstrength(pw){
+function pwstrength(input){
+	pw = input.value;
     var v = 0;
     if (new RegExp("[a-z]").test(pw)){
         v+=12;
@@ -24,7 +25,7 @@ function pwstrength(pw){
     if (pw.length>13){
         v+=12;
     }
-    p = $('#pwstrength');
+    p = $(input).closest('.pwfield').find('.pwstrength');
     p.css('width',v+'%');
     if (v>33 && v<66){
         p.css('background', '-webkit-gradient(linear, 0 0, 0 bottom, from(#ff9000), to(#bb4000))');
@@ -50,12 +51,12 @@ $(function(){
 
     $(window).resize();
 	
-	$("#password").keyup(function(){
-        pwstrength(this.value);  
+	$(".password").keyup(function(){
+        pwstrength(this);  
     });
     
     
-    $("#password").change(function(){
+    $(".password").change(function(){
         $(this).keyup();
     });
     
