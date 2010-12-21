@@ -7,9 +7,10 @@
 
         <link type="text/css" href="/css/encpad.css" rel="stylesheet" /> 
         
-<!--        <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>-->
-<!--        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>-->
-<!--        <link href='https://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>-->
+        <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
         
        
         <script type="text/javascript" src="/js/jquery-1.4.3.min.js"></script>
@@ -22,28 +23,33 @@
     	   Encrypted notepad 
     	</h1>
     	<div class="actions">
-           <a href="javascript:void(0)" class="action"><img src="/img/information.png"/><div class="adesc">about</div></a>
+           <a href="javascript:void(0)" class="action" id="aboutAction"><img src="/img/information.png"/><div class="adesc">about</div></a>
            <a href="javascript:void(0)" class="action"><img src="/img/balloon.png"/><div class="adesc">contact</div></a>        
            <a href="javascript:void(0)" class="action"><img src="/img/upload.png"/><div class="adesc">upload</div></a>        
            <a href="javascript:void(0)" class="action"><img src="/img/mail.png"/><div class="adesc">send</div></a>
-           <a href="javascript:void(0)" class="action"><img src="/img/save.png"/><div class="adesc">save</div></a>        
+           <a href="javascript:void(0)" class="action" id="saveAction"><img src="/img/save.png"/><div class="adesc">save</div></a>        
     	</div>
 	
         <textarea id="notepad" name="notepad"></textarea>
 	
         
-        <div id="savepanel">
+        <div id="savepanel" style="display:none;">
             <h3>To save your notes enter a password:</h3>
             <div class="pwfield">
-                <input class="password" name="password_save" type="password" />  
+                <input class="password" id="save_password" name="save_password" type="password" />  
                 <div class="progressbar">
                     <div class="pwstrength">&nbsp;</div>
                 </div>
             </div>
             <div class="buttons">
-                <a class="ok" href="javascript:void(0)">OK</a>
-                <a class="cancel" href="javascript:void(0)">Cancel</a>
+                <a class="ok" href="javascript:void(0)"><img src="/img/tick.png"/>OK</a>
+                <a class="cancel" href="javascript:void(0)"><img src="/img/cross.png"/>Cancel</a>
             </div>
+            <form id="saveform" action="/encpad" method="post" style="display:none">
+                <input type="hidden" name="action" value="save"/>
+                <input type="hidden" id="save_cypher" name="save_cypher"/>
+            </form>
+            
         </div>
         
 	</body>

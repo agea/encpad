@@ -46,7 +46,7 @@ return v;
 $(function(){
 	
     $(window).resize(function(){
-    	$("#notepad").height(($("html").innerHeight()-190)+'px');
+    	$("#notepad").height(($("html").innerHeight()-120)+'px');
     });
 
     $(window).resize();
@@ -65,5 +65,18 @@ $(function(){
     },function(){
     	$(this).find(".adesc").hide(100);
     	
+    });
+    
+    $('#saveAction').click(function(e){
+    	$('#savepanel').show(100);
+    });
+    
+    $('#savepanel .cancel').click(function(){
+    	$('#savepanel').hide(100);
+    });
+    
+    $('#savepanel .ok').click(function(){
+    	$('#save_cypher').val(sjcl.encrypt($('#save_password').val(),$('#notepad').val()));
+    	$('#saveform').submit();
     });
 });

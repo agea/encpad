@@ -15,12 +15,11 @@ body {
 	width: 720px;
 	height: 100%;
 	position: relative;
-	font: 15px 'Trebuchet MS' ', sans-serif;
+	font: 15px 'Molengo', 'Trebuchet MS', sans-serif;
 	-webkit-box-shadow: #000 2px 2px 12px;
 	-moz-box-shadow: #000 2px 2px 12px;
 	box-shadow: #000 2px 2px 12px;
 	z-index: 100;
-	font: 15px 'Cantarell', sans-serif;
 }
 
 h1 {
@@ -59,7 +58,9 @@ a img {
 	-webkit-box-shadow: #000 2px 2px 12px;
 	-moz-box-shadow: #000 2px 2px 12px;
 	box-shadow: #000 2px 2px 12px;
+	border:0;
 }
+
 
 .actions a:hover {
 	-webkit-box-shadow: #fff 2px 2px 12px;
@@ -72,7 +73,7 @@ a img {
 	display: none;
 	text-decoration: none;
 	color: #666;
-	font-size: 10px;
+	font: 10px 'Molengo', sans-serif;
 }
 
 #notepad {
@@ -135,6 +136,7 @@ a img {
 	top: 50%;
 	left: 50%;
 	margin-left: -161px;
+	margin-top:-92px;
 	width: 322px;
 	padding: 10px;
 	background: #7db348;
@@ -142,9 +144,9 @@ a img {
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
 	display: block;
-	-webkit-box-shadow: #000 2px 2px 40px;
-	-moz-box-shadow: #000 2px 2px 40px;
-	box-shadow: #000 2px 2px 40px;
+	-webkit-box-shadow: #000 2px 2px 64px;
+	-moz-box-shadow: #000 2px 2px 64px;
+	box-shadow: #000 2px 2px 64px;
 }
 
 .buttons {
@@ -155,10 +157,9 @@ a img {
 .buttons a {
 	display: block;
 	float: right;
-	margin: 8px;
-	padding: 8px;
+	margin: 0px 0px 8px 8px;
+	padding: 4px 8px;
 	border: 1px solid #666;
-	padding-left: 48px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff),
 		to(#bbbbbb) );
 	background: -moz-linear-gradient(#ffffff, #bbbbbb);
@@ -167,4 +168,13 @@ a img {
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
 	display: block;
+	text-decoration: none;
+	color: #444;
+	text-align: left;
+}
+
+.buttons a img {
+	float: left;
+	display: block;
+	margin-right: 4px;
 }
