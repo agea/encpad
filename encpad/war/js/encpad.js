@@ -46,7 +46,8 @@ return v;
 $(function(){
 	
     $(window).resize(function(){
-    	$("#notepad").height(($("html").innerHeight()-120)+'px');
+    	$("#notepad").height(($("html").innerHeight()-128)+'px');
+    	$("#notepad").width(($("html").innerWidth()-20)+'px');
     });
 
     $(window).resize();
