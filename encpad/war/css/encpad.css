@@ -7,6 +7,7 @@ html {
 }
 
 body {
+	color: #003b55;
 	margin: 0px auto;
 	border: 0px;
 	padding: 0px;
@@ -18,14 +19,37 @@ body {
 
 h1 {
 	color: white;
-	font: 64px 'Neucha', "Trebuchet MS", sans-serif;
+	font: 48px 'Neucha', "Trebuchet MS", sans-serif;
+	height: 62px;
 	margin: 0;
 	padding: 10px;
-	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#888888),
-        to(#222222) );
-    background: -moz-linear-gradient(#888888, #222222);
-    background: linear-gradient(#888888, #222222);
-	
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#009add),
+		to(#002433) );
+	background: -moz-linear-gradient(#009add, #002433);
+	background: linear-gradient(#009add, #002433);
+}
+
+#titleText {
+	position: absolute;
+	top: 13px;
+	left: 16px;
+	color: #99e0ff;
+}
+
+#titleBg {
+	position: absolute;
+	top: 15px;
+	left: 18px;
+	color: #004766;
+}
+
+#notepad {
+	color: #99e0ff;
+	background: #003b55;
+	font: 20px 'Inconsolata', monospace;
+	padding: 20px;
+	margin: auto ! important;
+	border: 0;
 }
 
 a img {
@@ -72,15 +96,6 @@ a img {
 	text-decoration: none;
 	color: #666;
 	font: 10px 'Molengo', sans-serif;
-}
-
-#notepad {
-	background: #333;
-	color: #ff9000;
-	font: 20px 'Inconsolata', monospace;
-	padding: 20px;
-	margin: auto ! important;
-	border:0;
 }
 
 .pwfield {
@@ -134,19 +149,16 @@ a img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-left: -161px;
+	margin-left: -310px;
 	margin-top: -92px;
-	width: 322px;
+	width: 600px;
 	font-size: 150%;
 	padding: 10px;
 	background: white;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
 	display: block;
-	-webkit-box-shadow: #000 2px 2px 64px;
-	-moz-box-shadow: #000 2px 2px 64px;
-	box-shadow: #000 2px 2px 64px;
+	-webkit-box-shadow: #000 2px 2px 24px;
+	-moz-box-shadow: #000 2px 2px 24px;
+	box-shadow: #000 2px 2px 24px;
 }
 
 .buttons {
