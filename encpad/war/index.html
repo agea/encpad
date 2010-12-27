@@ -7,10 +7,10 @@
 
         <link type="text/css" href="/css/encpad.css" rel="stylesheet" /> 
         
-        <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+<!--        <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>-->
+<!--        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>-->
+<!--        <link href='https://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>-->
+<!--        <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>-->
         
        
         <script type="text/javascript" src="/js/jquery-1.4.3.min.js"></script>
@@ -19,19 +19,31 @@
 			
 	</head>
 	<body>
-    	<h1>
-           <span id="titleBg">Encrypted notepad</span> 
-           <span id="titleText">Encrypted notepad</span> 
-    	</h1>
-    	<div class="actions">
+	   <table id="lt" cellspacing="0">
+	       <tr>
+	           <td id="titleCell" colspan="2">
+	               <h1>
+                        Encrypted notepad
+                   </h1>
+	           </td>
+	       </tr>
+	       <tr>
+               <td id="actionsCell">
+        <div class="actions">
            <a href="javascript:void(0)" class="action" id="saveAction"><img src="/img/save.png"/><div class="adesc">save</div></a>        
            <a href="javascript:void(0)" class="action"><img src="/img/mail.png"/><div class="adesc">send</div></a>
            <a href="javascript:void(0)" class="action"><img src="/img/upload.png"/><div class="adesc">upload</div></a>        
            <a href="javascript:void(0)" class="action"><img src="/img/balloon.png"/><div class="adesc">contact</div></a>        
            <a href="javascript:void(0)" class="action" id="aboutAction"><img src="/img/information.png"/><div class="adesc">about</div></a>
-    	</div>
+        </div>
+               </td>
+               <td id="noteCell">
+                       <textarea id="notepad" name="notepad"></textarea>
+               
+               </td>
+	       </tr>
+	   </table>
 	
-        <textarea id="notepad" name="notepad"></textarea>
 	
         
         <div id="savepanel" style="display:none;">

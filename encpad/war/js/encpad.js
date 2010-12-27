@@ -45,12 +45,12 @@ return v;
 
 $(function(){
 	
-    $(window).resize(function(){
-    	$("#notepad").height(($("html").innerHeight()-120)+'px');
-    	$("#notepad").width(($("html").innerWidth()-20)+'px');
-    });
-
-    $(window).resize();
+//    $(window).resize(function(){
+//    	$("#notepad").height(($("html").innerHeight()-120)+'px');
+//    	$("#notepad").width(($("html").innerWidth()-20)+'px');
+//    });
+//
+//    $(window).resize();
     
     $('#notepad').focus();
 	
@@ -63,12 +63,12 @@ $(function(){
         $(this).keyup();
     });
     
-    $(".action").hover(function(){
-    	$(this).find(".adesc").show(200);
-    },function(){
-    	$(this).find(".adesc").hide(100);
-    	
-    });
+//    $(".action").hover(function(){
+//    	$(this).find(".adesc").show(200);
+//    },function(){
+//    	$(this).find(".adesc").hide(100);
+//    	
+//    });
     
     $('#saveAction').click(function(e){
     	$('#savepanel').show(100);
