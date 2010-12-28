@@ -52,6 +52,7 @@ $(function(){
 //
 //    $(window).resize();
     
+	$('#notepad').tabby();
     $('#notepad').focus();
 	
 	$(".password").keyup(function(){

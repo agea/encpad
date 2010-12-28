@@ -71,6 +71,10 @@ h1 {
 	height: 100%;
 }
 
+#notepad:focus {
+	outline: none;
+}
+
 a img {
 	border: 0;
 }
@@ -124,11 +128,11 @@ a img {
 
 .password {
 	font-size: 16px;
-	width: 290px;
+	width: 570px;
 	display: block;
 	margin-bottom: 2px;
 	padding-left: 24px;
-	border: 0;
+	border: 1px solid #ccc;
 	background: url(/img/key.png) white 0px 50% no-repeat;
 }
 
