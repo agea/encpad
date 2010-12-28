@@ -20,7 +20,6 @@ body {
 h1 {
 	color: #333;
 	font: 48px 'Neucha', "Trebuchet MS", sans-serif;
-	height: 62px;
 	margin: 0;
 	padding: 10px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff),
@@ -206,4 +205,23 @@ a img {
 	float: left;
 	display: block;
 	margin-right: 4px;
+}
+
+@media screen and (max-width: 480px) {
+	body {
+		width: 480px;
+	}
+	@media screen and (max-height:320px) {
+		.actions img {
+			display: none;
+		}
+	}
+	@media screen and (max-width: 320px) {
+		body {
+			width: 320px;
+		}
+		h1 {
+			font-size: 32px;
+		}
+	}
 }
