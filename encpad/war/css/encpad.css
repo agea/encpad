@@ -207,21 +207,23 @@ a img {
 	margin-right: 4px;
 }
 
-@media screen and (max-width: 480px) {
-	body {
+@media screen and (max-width:480px) {
+	html {
 		width: 480px;
 	}
-	@media screen and (max-height:320px) {
-		.actions img {
-			display: none;
-		}
+	h1 {
+		font-size: 32px;
 	}
-	@media screen and (max-width: 320px) {
-		body {
-			width: 320px;
-		}
-		h1 {
-			font-size: 32px;
-		}
+}
+
+@media screen and (max-height:400px) {
+	.actions img {
+		display: none;
+	}
+}
+
+@media screen and (max-width:320px) {
+	html {
+		width: 320px;
 	}
 }
