@@ -7,7 +7,6 @@ html {
 }
 
 body {
-	color: #003b55;
 	margin: 0px auto;
 	border: 0px;
 	padding: 0px;
@@ -83,7 +82,7 @@ a img {
 	display: block;
 	text-align: center;
 	padding: 8px;
-	margin: 0 12px;
+	margin: 0 16px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff),
 		to(#bbbbbb) );
 	background: -moz-linear-gradient(#ffffff, #bbbbbb);
@@ -114,20 +113,9 @@ a img {
 	font: 10px 'Molengo', sans-serif;
 }
 
-.pwfield {
-	font-size: 16px;
-	width: 312px;
-	background: white;
-	padding: 4px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
-	border: 1px solid #666;
-}
 
 .password {
-	font-size: 16px;
-	width: 570px;
+	width: 274px;
 	display: block;
 	margin-bottom: 2px;
 	padding-left: 24px;
@@ -135,40 +123,19 @@ a img {
 	background: url(/img/key.png) white 0px 50% no-repeat;
 }
 
-.progressbar {
-	clear: both;
-	width: 304px;
-	margin-left: 4px;
-	maergin-right: 4px;
-	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#000000),
-		to(#666666) );
-	background: -moz-linear-gradient(#000000, #666666);
-	background: linear-gradient(#000000, #666666);
-	border: 1px solid #666;
-	-moz-border-radius: 100%;
-	-webkit-border-radius: 100%;
-	border-radius: 100%;
-}
 
-.pwstrength {
-	font-size: 4px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border-radius: 6px;
-	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#000000),
-		to(#666666) );
-	background: -moz-linear-gradient(#000000, #666666);
-	background: linear-gradient(#000000, #666666);
-}
+
+
 
 #savepanel {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-left: -310px;
-	margin-top: -92px;
-	width: 600px;
-	font-size: 150%;
+	margin-left: -150px;
+	margin-top: -75px;
+	width: 300px;
+	height: 150px;
+	font-size: 100%;
 	padding: 10px;
 	background: white;
 	display: block;
@@ -207,10 +174,21 @@ a img {
 	margin-right: 4px;
 }
 
-@media screen and (min-width:800px) {
-	h1 {
-		font-size: 58px;
-	}
+
+
+@media screen and (max-height: 400px) {
+    .actions a img{
+        display:none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 58px;
+    }
+}
+
+@media screen and (min-width:840px) {
 	.actions {
 		position: absolute;
 		top: 13px;
@@ -218,5 +196,8 @@ a img {
 	}
 	.actions a {
 		float: left;
+	}
+	.actionsCell {
+		width: 0.5em;
 	}
 }

@@ -25,20 +25,14 @@ function pwstrength(input){
     if (pw.length>13){
         v+=12;
     }
-    p = $(input).closest('.pwfield').find('.pwstrength');
-    p.css('width',v+'%');
-    if (v>33 && v<66){
-        p.css('background', '-webkit-gradient(linear, 0 0, 0 bottom, from(#ff9000), to(#bb4000))');
-        p.css('background', '-moz-linear-gradient(#ff9000, #bb4000)');
-        p.css('background', 'linear-gradient(#ff9000, #bb4000)');        
-    } else if (v>66){
-        p.css('background', '-webkit-gradient(linear, 0 0, 0 bottom, from(#00ff00), to(#00bb00))');
-        p.css('background', '-moz-linear-gradient(#00ff00, #00bb00)');
-        p.css('background', 'linear-gradient(#00ff00, #00bb00)');
+    if (v>48 && v<72){
+        $('#okimg').attr('src','/img/smiley-neutral.png');       
+    } else if (v>72 && v<90 ){
+        $('#okimg').attr('src','/img/smiley-mr-green.png');       
+    } else if (v>90){
+        $('#okimg').attr('src','/img/smiley-evil.png');       
     } else {
-        p.css('background', '-webkit-gradient(linear, 0 0, 0 bottom, from(#ff0000), to(#bb0000))');
-        p.css('background', '-moz-linear-gradient(#ff0000, #bb0000)');
-        p.css('background', 'linear-gradient(#ff0000, #bb0000)');
+        $('#okimg').attr('src','/img/smiley-sad.png');       
     }
 return v;
 }

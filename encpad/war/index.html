@@ -35,10 +35,11 @@
         <div class="actions">
            <a href="javascript:void(0)" class="action" id="saveAction"><img src="/img/save.png"/><div class="adesc">save</div></a>        
            <a href="javascript:void(0)" class="action"><img src="/img/mail.png"/><div class="adesc">send</div></a>
-           <a href="javascript:void(0)" class="action"><img src="/img/upload.png"/><div class="adesc">upload</div></a>        
+<!--           <a href="javascript:void(0)" class="action"><img src="/img/upload.png"/><div class="adesc">upload</div></a>        -->
 <!--           <a href="javascript:void(0)" class="action"><img src="/img/balloon.png"/><div class="adesc">contact</div></a>        -->
            <a href="javascript:void(0)" class="action" id="aboutAction"><img src="/img/information.png"/><div class="adesc">about</div></a>
         </div>
+        &nbsp;&nbsp;
                </td>
                <td id="noteCell">
                        <textarea id="notepad" name="notepad"></textarea>
@@ -53,7 +54,7 @@
             <h3>To save your notes enter a password:</h3>
                 <input class="password" id="save_password" name="save_password" type="password" />  
             <div class="buttons">
-                <a class="ok" href="javascript:void(0)"><img src="/img/tick.png"/>OK</a>
+                <a class="ok" href="javascript:void(0)"><img id="okimg" src="/img/smiley-sad.png"/>OK</a>
                 <a class="cancel" href="javascript:void(0)"><img src="/img/cross.png"/>Cancel</a>
             </div>
             <form id="saveform" action="/encpad.html" method="post" style="display:none">
@@ -62,7 +63,18 @@
             </form>
             
         </div>
-        
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-1063309-15']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+</script>
 	</body>
 </html>
 
