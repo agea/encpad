@@ -113,19 +113,17 @@ a img {
 	font: 10px 'Molengo', sans-serif;
 }
 
-
 .password {
 	width: 274px;
 	display: block;
 	margin-bottom: 2px;
 	padding-left: 24px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	border: 1px solid #ccc;
 	background: url(/img/key.png) white 0px 50% no-repeat;
+	padding-bottom: 4px;
 }
-
-
-
-
 
 #savepanel {
 	position: absolute;
@@ -142,6 +140,7 @@ a img {
 	-webkit-box-shadow: #000 2px 2px 24px;
 	-moz-box-shadow: #000 2px 2px 24px;
 	box-shadow: #000 2px 2px 24px;
+	font-size: 100%;
 }
 
 .buttons {
@@ -172,20 +171,19 @@ a img {
 	float: left;
 	display: block;
 	margin-right: 4px;
+	margin-top: 2px;
 }
 
-
-
 @media screen and (max-height: 400px) {
-    .actions a img{
-        display:none;
-    }
+	.actions a img {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 600px) {
-    h1 {
-        font-size: 58px;
-    }
+	h1 {
+		font-size: 58px;
+	}
 }
 
 @media screen and (min-width:840px) {
