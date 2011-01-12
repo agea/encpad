@@ -1,4 +1,4 @@
-package com.github.jskeys.encpad;
+package com.github.encpad;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
