@@ -67,10 +67,12 @@ $(function(){
     
     $('#saveAction').click(function(e){
     	$('#savepanel').show(100);
+    	$('#save_password').focus();
     });
     
     $('#savepanel .cancel').click(function(){
     	$('#savepanel').hide(100);
+        $('#notepad').focus();
     });
     
     $('#savepanel .ok').click(function(){

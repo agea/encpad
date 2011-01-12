@@ -13,12 +13,20 @@ body {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	font: 15px 'Molengo', 'Trebuchet MS', sans-serif;
+	font: 15px 'Trebuchet MS', sans-serif;
+}
+
+h1,
+.actions a,
+.actions a:hover,
+#savepanel,
+.buttons a {
+	behavior: url(/css/PIE.htc);
 }
 
 h1 {
 	color: #333;
-	font: 32px 'Neucha', "Trebuchet MS", sans-serif;
+	font: 32px 'Neucha', 'Trebuchet MS', sans-serif;
 	margin: 0;
 	padding: 10px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff),
@@ -55,13 +63,12 @@ h1 {
 	vertical-align: top;
 	height: 100%;
 	width: 100%;
-	background: #003b55;
 }
 
 #notepad {
 	color: #333;
 	background: transparent;
-	font: 20px 'Inconsolata', monospace;
+	font: 20px monospace;
 	padding: 0;
 	border: 0;
 	margin: 0;
@@ -110,11 +117,11 @@ a img {
 .adesc {
 	text-decoration: none;
 	color: #666;
-	font: 10px 'Molengo', sans-serif;
+	font-size: 10px;
 }
 
 .password {
-	width: 204px;
+	width: 210px;
 	display: block;
 	margin-bottom: 2px;
 	padding-left: 24px;

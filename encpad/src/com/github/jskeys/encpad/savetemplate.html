@@ -42,24 +42,47 @@ sjcl.misc.cachedPbkdf2=function(a,b){var c=sjcl.misc.S,d;b=b||{};d=b.iter||1E3;c
         
         <script type="text/javascript">
             function decode(){
-                document.getElementById('notepad').innerHTML=
-                sjcl.decrypt(document.getElementById('pw').value,'@@cypher@@');
+                var rp={};
+                var out = sjcl.decrypt(document.getElementById('pw').value,'@@cypher@@',null,rp);
+                document.getElementById('notepad').innerHTML=rp;
+                
             };
         </script>
         <style type="text/css">
             
+html{
+heigth:100%;
+background: #f6e9a4;
+font-size: 20px;
+}
+
+#prompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -120px;
+    margin-top: -75px;
+    width: 240px;
+    font-size: 100%;
+    padding: 10px;
+    background: white;
+    display: block;
+    -webkit-box-shadow: #000 2px 2px 24px;
+    -moz-box-shadow: #000 2px 2px 24px;
+    box-shadow: #000 2px 2px 24px;
+    font-size: 100%;
+}
         </style>
     
     </head>
     <body>
     
-        <div>
-        password: <input type="password" id="pw"/>
-        <input type="button" value="go" onclick="decode()"/>
+        <div id="prompt">
+        Enter your passphrase: 
+        <input type="password" id="pw"/>
+        <input id="decode" type="button" value="decrypt" onclick="decode()"/>
         </div>
-        <pre id="notepad">
-        
-        </pre>
+        <pre id="notepad"></pre>
     
     </body>
 </html>
