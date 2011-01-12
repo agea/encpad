@@ -55,9 +55,21 @@ try{
         </script>
         <style type="text/css">
 html{
-heigth:100%;
+height:100%;
 background: #f6e9a4;
 font-size: 20px;
+border:0;
+margin:0;
+padding:0;
+}
+
+#notepad{
+height:100%;
+width:100%;
+background:transparent;
+border:0;
+margin:0;
+padding:0;
 }
 #prompt {
     position: absolute;
@@ -84,7 +96,7 @@ font-size: 20px;
             <input type="password" id="pw" onchange="decode()"/>
             <input id="decode" type="button" value="decrypt" />
         </div>
-        <pre id="notepad"></pre>
+        <textarea readonly="true" id="notepad"></textarea>
         <script type="text/javascript">document.getElementById('pw').focus();</script>
     </body>
 </html>
