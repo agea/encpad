@@ -30,7 +30,7 @@
                <td id="actionsCell">
         <div class="actions">
            <a href="javascript:void(0)" class="action" id="saveAction"><img src="/img/save.png"/><div class="adesc">save</div></a>        
-           <a href="javascript:void(0)" class="action"><img src="/img/mail.png"/><div class="adesc">send</div></a>
+           <a href="javascript:void(0)" class="action" id="mailAction"><img src="/img/mail.png"/><div class="adesc">send</div></a>
 <!--           <a href="javascript:void(0)" class="action"><img src="/img/upload.png"/><div class="adesc">upload</div></a>        -->
 <!--           <a href="javascript:void(0)" class="action"><img src="/img/balloon.png"/><div class="adesc">contact</div></a>        -->
            <a href="javascript:void(0)" class="action" id="aboutAction"><img src="/img/information.png"/><div class="adesc">about</div></a>
@@ -47,18 +47,26 @@
 	
         
         <div id="savepanel" style="display:none;">
-            <h3>Enter a passphrase to encrypt your notes:</h3>
-                <input class="password" id="save_password" name="save_password" type="password" />  
+            <label>Enter a passphrase to encrypt your notes:</label>
+                <input class="password" id="save_password" name="save_password" type="password" />
+            <form id="saveform" action="/encpad.html" method="post" >
+             <div id="mail" style="display:none;">
+                <label>Email your notes to this address:</label>
+                    <input class="email" id="save_email" name="save_email" type="email" />
+             
+             </div>  
             <div class="buttons">
                 <a class="ok" href="javascript:void(0)"><img id="okimg" src="/img/smiley-sad.png"/>OK</a>
                 <a class="cancel" href="javascript:void(0)"><img src="/img/cross.png"/>Cancel</a>
             </div>
-            <form id="saveform" action="/encpad.html" method="post" style="display:none">
-                <input type="hidden" name="action" value="save"/>
+                <input type="hidden" name="action" id="form_action" value="save"/>
                 <input type="hidden" id="save_cypher" name="save_cypher"/>
             </form>
             
         </div>
+        
+
+        
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-1063309-15']);

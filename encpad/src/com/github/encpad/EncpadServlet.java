@@ -3,7 +3,13 @@ package com.github.encpad;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Properties;
 
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,9 +24,29 @@ public class EncpadServlet extends HttpServlet {
 			if (action.equals("save")) {
 				this.save(req, resp);
 			}
+			if (action.equals("email")) {
+				this.email(req, resp);
+			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
+	}
+
+	private void email(HttpServletRequest req, HttpServletResponse resp)
+			throws Exception {
+		Properties props = new Properties();
+		Session session = Session.getDefaultInstance(props, null);
+
+		String msgBody = "the body!";
+
+		Message msg = new MimeMessage(session);
+		msg.setFrom(new InternetAddress("encpad@encpad.appspot.com"));
+		msg.addRecipient(Message.RecipientType.TO,
+				new InternetAddress(req.getParameter("save_email")));
+		msg.setSubject("the subject");
+		msg.setText(msgBody);
+		Transport.send(msg);
+
 	}
 
 	private void save(HttpServletRequest req, HttpServletResponse resp)

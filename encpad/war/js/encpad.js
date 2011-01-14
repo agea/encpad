@@ -69,9 +69,18 @@ $(function(){
     	$('#savepanel').show(100);
     	$('#save_password').focus();
     });
+
+    $('#mailAction').click(function(e){
+    	$('#savepanel').show(100);
+    	$('#mail').show();
+    	$('#form_action').val('email');
+    	$('#save_password').focus();
+    });
     
     $('#savepanel .cancel').click(function(){
     	$('#savepanel').hide(100);
+    	$('#mail').hide();
+    	$('#form_action').val('save');
         $('#notepad').focus();
     });
     
