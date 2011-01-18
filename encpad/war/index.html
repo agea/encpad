@@ -18,55 +18,41 @@
 			
 	</head>
 	<body>
-	   <table id="lt" cellspacing="0">
-	       <tr>
-	           <td id="titleCell" colspan="2">
+           <a href="javascript:void(0)"  id="aboutAction"><img src="/img/information.png"/><div class="adesc">about</div></a>
+
 	               <h1>
                         Encrypted notepad
                    </h1>
-	           </td>
-	       </tr>
-	       <tr>
-               <td id="actionsCell">
-        <div class="actions">
-           <a href="javascript:void(0)" class="action" id="saveAction"><img src="/img/save.png"/><div class="adesc">save</div></a>        
-           <a href="javascript:void(0)" class="action" id="mailAction"><img src="/img/mail.png"/><div class="adesc">send</div></a>
-<!--           <a href="javascript:void(0)" class="action"><img src="/img/upload.png"/><div class="adesc">upload</div></a>        -->
-<!--           <a href="javascript:void(0)" class="action"><img src="/img/balloon.png"/><div class="adesc">contact</div></a>        -->
-           <a href="javascript:void(0)" class="action" id="aboutAction"><img src="/img/information.png"/><div class="adesc">about</div></a>
-        </div>
-        &nbsp;&nbsp;
-               </td>
-               <td id="noteCell">
-                       <textarea id="notepad" name="notepad"></textarea>
-               
-               </td>
-	       </tr>
-	   </table>
-	
-	
-        
-        <div id="savepanel" style="display:none;">
-            <label>Enter a passphrase to encrypt your notes:</label>
+                       <textarea id="notepad" name="notepad"></textarea>               
+
+<div id="footer">
+
+<div id="pwfield">
                 <input class="password" id="save_password" name="save_password" type="password" />
+                <a href="javascript:void(0)" class="action" id="saveAction"><img src="/img/save.png"/><div class="adesc">save</div></a>        
+            <label>Enter a passphrase to encrypt your notes</label>
+</div>                
+<div id="mailfield">
             <form id="saveform" action="/encpad.html" method="post" >
-             <div id="mail" style="display:none;">
-                <label>Email your notes to this address:</label>
                     <input class="email" id="save_email" name="save_email" type="email" />
-             
-             </div>  
-            <div class="buttons">
-                <a class="ok" href="javascript:void(0)"><img id="okimg" src="/img/smiley-sad.png"/>OK</a>
-                <a class="cancel" href="javascript:void(0)"><img src="/img/cross.png"/>Cancel</a>
-            </div>
+           <a href="javascript:void(0)" class="action" id="mailAction"><img src="/img/mail.png"/><div class="adesc">send</div></a>
+                <label>If you want to send your notes, enter an email address</label>
+
                 <input type="hidden" name="action" id="form_action" value="save"/>
                 <input type="hidden" id="save_cypher" name="save_cypher"/>
             </form>
-            
-        </div>
-        
+</div>             
 
+            <div class="buttons">
+                <a class="ok" href="javascript:void(0)"><img id="okimg" src="/img/smiley-sad.png"/>OK</a>
+            </div>
+
+</div>
+	
+	
         
+            
+
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-1063309-15']);

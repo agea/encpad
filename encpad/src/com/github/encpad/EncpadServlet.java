@@ -40,7 +40,7 @@ public class EncpadServlet extends HttpServlet {
 		String msgBody = "the body!";
 
 		Message msg = new MimeMessage(session);
-		msg.setFrom(new InternetAddress("encpad@encpad.appspot.com"));
+		msg.setFrom(new InternetAddress("noreply@encpad.appspotmail.com"));
 		msg.addRecipient(Message.RecipientType.TO,
 				new InternetAddress(req.getParameter("save_email")));
 		msg.setSubject("the subject");

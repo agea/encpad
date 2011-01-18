@@ -3,6 +3,10 @@
 	<application>encpad</application>
 	<version>1</version>
 	
+	<inbound-services>
+        <service>mail</service>
+    </inbound-services>
+
 	<!-- Configure java.util.logging -->
 	<system-properties>
 		<property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
