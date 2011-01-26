@@ -9,7 +9,7 @@
 
         <link type="text/css" href="/css/encpad.css" rel="stylesheet" /> 
         
-        <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>        
+<!--        <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>        -->
        
         <script type="text/javascript" src="/js/jquery-1.4.3.min.js"></script>
         <script type="text/javascript" src="/js/sjcl.js"></script>
@@ -18,53 +18,76 @@
 			
 	</head>
 	<body>
-           <a href="javascript:void(0)"  id="aboutAction"><img src="/img/information.png"/><div class="adesc">about</div></a>
-
-	               <h1>
-                        Encrypted notepad
-                   </h1>
-                       <textarea id="notepad" name="notepad"></textarea>               
-
-<div id="footer">
-
-<div id="pwfield">
-                <input class="password" id="save_password" name="save_password" type="password" />
-                <a href="javascript:void(0)" class="action" id="saveAction"><img src="/img/save.png"/><div class="adesc">save</div></a>        
-            <label>Enter a passphrase to encrypt your notes</label>
+	   <h1>
+           <span id="titleText" >Encrypted notepad</span>                       
+           <div id="actions">             
+               <a href="#about" class="action" id="aboutAction"><img src="/img/information.png"/><div class="adesc">about</div></a>
+               <a href="javascript:void(0)" class="action" id="mailAction"><img src="/img/mail.png"/><div class="adesc">send</div></a>
+               <a href="javascript:void(0)" class="action" id="saveAction"><img src="/img/save.png"/><div class="adesc">save</div></a>        
+           </div>
+           <br style="clear:both;font-size: 1%;"/>    
+       </h1>
+                   
+                   <div id="savepanel" style="display:none;">
+                   
+                   <div id="pwfield" style="display:none;">
+                <input class="password" id="save_password" name="save_password" type="password" /><br/>
+                <label>Enter a passphrase to encrypt your notes</label>
 </div>                
-<div id="mailfield">
+<div id="mailfield" style="display:none;">
             <form id="saveform" action="/encpad.html" method="post" >
-                    <input class="email" id="save_email" name="save_email" type="email" />
-           <a href="javascript:void(0)" class="action" id="mailAction"><img src="/img/mail.png"/><div class="adesc">send</div></a>
+                    <input class="email" id="save_email" name="save_email" type="email" /><br/>
                 <label>If you want to send your notes, enter an email address</label>
 
                 <input type="hidden" name="action" id="form_action" value="save"/>
                 <input type="hidden" id="save_cypher" name="save_cypher"/>
             </form>
-</div>             
+</div>
 
-            <div class="buttons">
-                <a class="ok" href="javascript:void(0)"><img id="okimg" src="/img/smiley-sad.png"/>OK</a>
-            </div>
+<div class="buttons">
+<a href="javascript:void(0)" class="button cancel"><img src="/img/cross.png" />cancel</a>
+<a href="javascript:void(0)" class="button ok"><img src="/img/smiley-sad.png" id="okimg" />ok</a>
+     </div>
+     <br style="clear:both;"/>
+</div>        
+                   
+                       <textarea id="notepad" name="notepad"></textarea>               
+
+
+	
+<div id="about">
+<a id="aboutAnchor" name="about">&nbsp;</a>
+<h2>About Encrypted Notepad</h2>
+<div id="aboutText">
+
+<p>The main purpose of this application is to have a secure place
+to keep personal data (like passwords, PINs and similar things). The idea is to have 
+the simplest possible way to keep such data avalaible to more devices as possible.
+Your data will be saved (or sent you via email) in HTML files containing both your data 
+encrypted with AES algorithm, and the algorithm itself, so almost any HTML-enabled device 
+with decent javascript support will be able do decrypt your data.</p>
+
+<p>Your data or your encryption key are <strong>never</strong> sent to the application, the 
+encryption is done locally in your browser and only the encrypted text is sent 
+to the server. You can (you <em>should</em>..) verify inspecting the source of this page</p>
 
 </div>
-	
-	
+</div>	
         
-            
 
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-1063309-15']);
-            _gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-
-</script>
+<!--        <script type="text/javascript">-->
+<!--            var _gaq = _gaq || [];-->
+<!--            _gaq.push(['_setAccount', 'UA-1063309-15']);-->
+<!--            _gaq.push(['_trackPageview']);-->
+<!---->
+<!--            (function() {-->
+<!--                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;-->
+<!--                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';-->
+<!--                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);-->
+<!--            })();-->
+<!---->
+<!--</script>-->
 	</body>
 </html>
 

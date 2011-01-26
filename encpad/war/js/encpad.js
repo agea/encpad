@@ -66,22 +66,23 @@ $(function(){
 //    });
     
     $('#saveAction').click(function(e){
-    	$('#savepanel').show(100);
+    	$('#pwfield').show();
+    	$('#savepanel').slideDown(150);
     	$('#save_password').focus();
     });
 
     $('#mailAction').click(function(e){
-    	$('#savepanel').show(100);
-    	$('#mail').show();
+    	$('#mailfield').slideDown(50);
     	$('#form_action').val('email');
-    	$('#save_password').focus();
+    	$('#saveAction').click();
+
     });
     
     $('#savepanel .cancel').click(function(){
-    	$('#savepanel').hide(100);
-    	$('#mail').hide();
+    	$('#mailfield').hide();
     	$('#form_action').val('save');
         $('#notepad').focus();
+    	$('#savepanel').slideUp(150);
     });
     
     $('#savepanel .ok').click(function(){
