@@ -63,12 +63,13 @@ public class EncpadServlet extends HttpServlet {
 		attachmentPart.setFileName("encpad.html");
 		attachmentPart.setDisposition(Part.ATTACHMENT);
 		DataSource src = new ByteArrayDataSource(this.prepareHtml(req)
-				.getBytes(), "text/html");
+				.getBytes(), "octet/stream");
 		DataHandler handler = new DataHandler(src);
 		attachmentPart.setDataHandler(handler);
 		mp.addBodyPart(attachmentPart);
 
 		msg.setContent(mp);
+
 		Transport.send(msg);
 
 		resp.sendRedirect("/");
